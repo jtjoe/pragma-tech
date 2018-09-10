@@ -1,9 +1,35 @@
-nav{
+body{
+  background-color: #555555;
+  color: #FFFFFF;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+}
 
+nav{
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+nav a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+nav a:hover{
+  color: #4ADA5F;
+}
+
+header{
+  color: #2DBFD5;
 }
 
 main{
 
+}
+main a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+main a:hover{
+  color: #4ADA5F;
 }
 
 footer{
