@@ -4,14 +4,17 @@
       <title>Pragma Technologies</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="styles.css">
+      <!-- ?<script src="vue.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
         <!--google fonts API import -->
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
       <!-- change to production version after -->
       <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     </head>
 
     <body>
+
       <header><h1>Pragma Technologies</h1></header>
 
       <nav>
@@ -21,35 +24,49 @@
           <a href="#contact">Contact Us</a>
       </nav>
 
-      <main>
+      <main id="main">
           <div id="intro">
+            <div id="app">
+              {{ message }}
+            </div>
+            <div id="slideshow">
+              <!-- <span v-for="item in items" v-bind:key="item"></span> -->
+              <slide_images></slide_images>
 
-            <div id="slideshow"></div>
+            </div>
+
             <p>Pragma Technologies is an innovative solutions company specializing in ...
             </p>
-            <a href="#intro">Back to Top</a>
+            <!-- <a href="#intro">Back to Top</a> -->
+            <to-top></to-top>
           </div>
 
           <div id="services">
             <h2>Our Services</h2></br>
-            <p> We offer various guidance packages to best accomodate your needs and goals. Our comprehensive analysis and ...
+            <p> We offer various guidance packages to best accomodate your needs and goals.
+              ___ comprehensive analysis and ...
             </p>
-            <a href="#intro">Back to Top</a>
+            <!-- <a href="#intro">Back to Top</a> -->
+            <to-top></to-top>
           </div>
 
           <div id="contact">
             <h2>Contact Us</h2></br>
             <p>Have a question or comment? Send us a message below!</p>
             <!-- newsletter form here -->
+            <div id="form"></div>
             <a href="mailto:hello@pragmatech.com">hello@pragmatech.com</a></br>
-            <a href="#intro">Back to Top</a>
+            <!-- <a href="#intro">Back to Top</a> -->
+            <to-top></to-top>
           </div>
 
       <footer>
         <p>
-
+          <ul>
+            <li></li>
+          </ul>
         </p>
       </footer>
-
+      <script src="app.js"></script>
     </body>
 </html>
