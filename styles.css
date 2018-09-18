@@ -1,6 +1,6 @@
 body{
-  background-color: #555555;
-  color: #FFFFFF;
+  /* background-color: ; */
+  color: #555555;
   font-family: 'Nunito Sans', Arial, sans-serif;
 }
 
@@ -11,28 +11,42 @@ nav{
 }
 nav a{
   text-decoration: none;
-  color: #FFFFFF;
+  color: #2DBFD5;
 }
 nav a:hover{
   color: #4ADA5F;
 }
 
 header{
-  /* background-color: black; */
+  /* background-color: black; color = blue*/
   color: #2DBFD5;
+  background-image: url(images/pragmatech-transp.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 120px;
+  margin-left: 20px;
 }
 
 main{
-
+  margin: 30px;
 }
 main a{
   text-decoration: none;
-  color: #FFFFFF;
+  color: #2DBFD5;
+  /* text-align: right;
+  font-size: 75%; */
 }
 main a:hover{
   color: #4ADA5F;
 }
 
-footer{
+.to-top{
+  text-align: right;
+  font-size: 75%;
+}
 
+footer{
+  text-align: center;
+    font-size: 75%;
 }
