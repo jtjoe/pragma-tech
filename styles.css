@@ -14,7 +14,7 @@ nav a{
   text-decoration: none;
   color: #2DBFD5;
 }
-nav a:hover{
+nav a:hover, main a:hover, footer a:hover{
   color: #4ADA5F;
 }
 
@@ -38,9 +38,6 @@ main a{
   /* text-align: right;
   font-size: 75%; */
 }
-main a:hover{
-  color: #4ADA5F;
-}
 
 .to-top{
   text-align: right;
@@ -62,6 +59,13 @@ label{
   width: 120px;
   padding-right: 20px;
   color: #2DBFD5;
+}
+#intro p{
+
+  width: 400px;
+  text-align: left;
+  margin: 20px;
+  /* paragraph floats into picture when window size is smaller */
 }
 
 #service-photo{
@@ -87,9 +91,9 @@ label{
   padding-bottom: 30px;
 }
 
-footer{
+footer, footer a{
   text-align: center;
-  font-size: 75%;
+  font-size: 90%;
   text-decoration: none;
   color: #2DBFD5;
 }
