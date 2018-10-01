@@ -26,19 +26,25 @@
 
       <main id="main">
           <div id="intro">
-            <div id="slideshow">
-              <slideshow>
-                <!-- <transition-group name='fade' tag='div'> -->
-                  <!-- <div v-for="number in [currentNumber]" :key='number'> -->
-                    <img :src="slides[currentSlide]"/>
-                    <!-- v-on:mouseover="stopShow" v-on:mouseout="startShow" -->
-                <!-- <img :src="images/computer-teamwork.jpg"/>
-                <img :src="images/imac.jpg"/> -->
-                <!-- <img src="https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg"/> -->
-                  <!-- </div> -->
-                <!-- </transition-group> -->
-              </slideshow>
-            </div>
+
+            <image-slider>
+      <p>
+        <a @click="prev" href='#'>Previous</a> || <a @click="next" href='#'>Next</a>
+      </p>
+
+      <transition-group name='fade' tag='div'>
+        <div
+         v-for="number in [currentNumber]"
+         :key='currentImage'
+         >
+           <img
+               :src="currentImage"
+               v-on:mouseover="stopRotation"
+               v-on:mouseout="startRotation"
+               />
+      </div>
+    </transition-group>
+  </image-slider>
 
 
             <p>Pragma Technologies is an innovative solutions company specializing in providing actionable business strategies
