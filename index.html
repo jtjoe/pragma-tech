@@ -15,7 +15,7 @@
 
     <body>
 
-      <header id="#"><a href='-----'></a></header>
+      <header id="#"><a href='https://jtjoe.github.io/pragma-tech/'></a></header>
 
       <nav>
           <a href="#">Home</a> &nbsp;
@@ -26,20 +26,39 @@
 
       <main id="main">
           <div id="intro">
-            <div id="slideshow">
-              <slideshow>
-                <!-- <transition-group name='fade' tag='div'> -->
-                  <!-- <div v-for="number in [currentNumber]" :key='number'> -->
-                    <img :src="slides[currentSlide]"/>
-                    <!-- v-on:mouseover="stopShow" v-on:mouseout="startShow" -->
-                <!-- <img :src="images/computer-teamwork.jpg"/>
-                <img :src="images/imac.jpg"/> -->
-                <!-- <img src="https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg"/> -->
-                  <!-- </div> -->
-                <!-- </transition-group> -->
-              </slideshow>
-            </div>
+            <h2>About</h2>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
 
+             <!-- Full-width images with number and caption text -->
+             <div class="mySlides fade">
+               <img src="https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/imac.jpg" style="width:100%">
+               <div class="text">Let us help optimize the use of technology in your business</div>
+             </div>
+
+             <div class="mySlides fade">
+               <img src="https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg" style="width:100%">
+               <div class="text">We offer hardware and software guidance for any need</div>
+             </div>
+
+             <div class="mySlides fade">
+               <img src="https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/computer-teamwork.jpg" style="width:100%">
+               <div class="text">Collaboration is key to our success</div>
+             </div>
+
+             <!-- Next and previous buttons -->
+             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+             <!-- The dots/circles -->
+             <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+             </div>
+
+            </div>
+            <br>
 
             <p>Pragma Technologies is an innovative solutions company specializing in providing actionable business strategies
               for a variety of technological problems. We develop our plans by integrating cutting edge research with industry knowledge and experience.
@@ -48,14 +67,16 @@
             </p>
 
           </div> <!-- end intro -->
-          <div class="to-top"><to-top></to-top></div> <!-- vue.js mixin -->
+          <br><div class="to-top"><to-top></to-top></div> <!-- vue.js mixin -->
 
           <div id="services">
             <h2>Our Services</h2></br>
+            <div id="service-text">
             <p> We offer various guidance packages to best accomodate your needs and goals.
               Every plan includes comprehensive analysis and detailed reports, as well as blueprints for multiple plans of action.
               Our diverse, dedicated, and experienced research teams and business experts are at your service with your collaboration with Pragma Technologies.
             </p>
+          </div>
             <div id="service-photo"></div>
 
           </div> <!-- end services -->

@@ -1,44 +1,3 @@
-
-var slides = ['https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg',
-'https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/imac.jpg',
-'https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/computer-teamwork.jpg'
-];
-
-
-new Vue({
-  el: '#slideshow',
-  data: {
-    images: slides,
-    currentSlide: 0,
-   }
-  //
-  // mounted: function (){
-  //   this.startShow();
-  // },
-  //
-  // methods:{
-  //   startShow: function (){
-  //     this.timer = setInterval(this.next, 3000);
-  //   },
-  //   stopShow: function(){
-  //     clearTimeout(this.timer);
-  //     this.timer = null;
-  //   },
-  //   next: function(){
-  //     this.currentNumber += 1
-  //   },
-  //   prev: function(){
-  //     this.currentNumber -= 1
-  //   }
-  // }, //end methods
-  //
-  // computed: { //calculate slide
-  //   currentImage: function(){
-  //     return this.images[Math.abs(this.currentNumber) % this.slides.length];
-  //   }
-  // }
-});
-
 Vue.component('to-top',{ //for back to top buttons
   template:'<p><a href="#">back to top</a></p>'
 });
@@ -47,3 +6,24 @@ new Vue({//for loading component
   el:'#main',
   data:{  }
 });
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
