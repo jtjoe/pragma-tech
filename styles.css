@@ -74,7 +74,7 @@ label{
   text-align: right;
   display: block;
 }
-#services p, #service-text{
+#services p{
   float: right;
   max-width: 400px;
   text-align: left;
