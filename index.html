@@ -15,7 +15,7 @@
 
     <body>
 
-      <header id="#"><a href='-----'></a></header>
+      <header id="#"><a href='https://jtjoe.github.io/pragma-tech/'></a></header>
 
       <nav>
           <a href="#">Home</a> &nbsp;
@@ -25,27 +25,28 @@
       </nav>
 
       <main id="main">
+        <div id="slogans">
+          <p>Welcome to Pragma Technologies, a consulting company focused on developing complete technological solutions for all kinds of clients, from small businesses to large corporations.
+            Our plans unify relevant, cutting-edge industry knowledge with modern methodologies tailored to each client's unique situation.
+            Contact us through the form at the bottom of the page for an estimate and more information regarding our guidance plans.
+          </p>
+        </div>
+
           <div id="intro">
+            <h2>About</h2>
+            <!-- Slideshow container -->
+            <div id="slideshow">
 
-            <image-slider>
-      <p>
-        <a @click="prev" href='#'>Previous</a> || <a @click="next" href='#'>Next</a>
-      </p>
+             <!-- Full-width images with number and caption text -->
+             <image-slider>
+               <img v-bind:src="currentImage"/>
+               <br>
+               <button id="prev-button" v-on:click="prev">Previous</button>
+               <button id="next-button" v-on:click="next">Next</button>
+             </image-slider>
 
-      <transition-group name='fade' tag='div'>
-        <div
-         v-for="number in [currentNumber]"
-         :key='currentImage'
-         >
-           <img
-               :src="currentImage"
-               v-on:mouseover="stopRotation"
-               v-on:mouseout="startRotation"
-               />
-      </div>
-    </transition-group>
-  </image-slider>
-
+            </div>
+            <br>
 
             <p>Pragma Technologies is an innovative solutions company specializing in providing actionable business strategies
               for a variety of technological problems. We develop our plans by integrating cutting edge research with industry knowledge and experience.
@@ -54,16 +55,17 @@
             </p>
 
           </div> <!-- end intro -->
-          <div class="to-top"><to-top></to-top></div> <!-- vue.js mixin -->
+          <br><div class="to-top"><to-top></to-top></div> <!-- vue.js mixin -->
 
           <div id="services">
+
             <h2>Our Services</h2></br>
+
             <p> We offer various guidance packages to best accomodate your needs and goals.
               Every plan includes comprehensive analysis and detailed reports, as well as blueprints for multiple plans of action.
               Our diverse, dedicated, and experienced research teams and business experts are at your service with your collaboration with Pragma Technologies.
             </p>
             <div id="service-photo"></div>
-
           </div> <!-- end services -->
           <div class="to-top"><to-top></to-top></div> <!-- vue.js mixin -->
 

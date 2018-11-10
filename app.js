@@ -2,10 +2,10 @@ Vue.component('to-top',{ //for back to top buttons
   template:'<p><a href="#">back to top</a></p>'
 });
 
-new Vue({//for loading component
-  el:'#main',
-  data:{  }
-});
+// new Vue({//for loading component
+//   el:'#main',
+//   data:{  }
+// });
 
 // var slides = ['https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg',
 // 'https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/imac.jpg',
@@ -16,7 +16,7 @@ new Vue({//for loading component
 new Vue({
     el: 'image-slider',
     data: {
-        images: ['https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg', 'http://i.imgur.com/PUD9HQL.jpg',
+        images: ['https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/business-server.jpeg',
                 'https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/imac.jpg',
                 'https://raw.githubusercontent.com/jtjoe/pragma-tech/master/images/computer-teamwork.jpg'],
         currentNumber: 0,
@@ -29,7 +29,8 @@ new Vue({
 
     methods: {
         startRotation: function() {
-            this.timer = setInterval(this.next, 3000);
+            console.log("rotation started");
+            this.timer = setInterval(this.next, 5000);
         },
 
         stopRotation: function() {
@@ -38,9 +39,11 @@ new Vue({
         },
 
         next: function() {
+            console.log("next");
             this.currentNumber += 1
         },
         prev: function() {
+            console.log("prev");
             this.currentNumber -= 1
         }
     },

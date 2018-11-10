@@ -80,6 +80,7 @@ label{
   width: 400px;
   text-align: left;
   margin: 20px;
+  display: block;
   /* paragraph floats into picture when window size is smaller */
 }
 
